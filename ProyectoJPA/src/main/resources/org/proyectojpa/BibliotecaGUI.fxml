@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane xmlns:fx="http://javafx.com/fxml"
+         fx:controller="org.proyectojpa.BibliotecaGUIController">
+    <tabs>
+        <Tab text="Libros">
+            <VBox alignment="CENTER" spacing="20.0">
+                <Button text="Agregar Libro" onAction="#mostrarVentanaAgregarLibro"/>
+                <Button text="Listar Libros" onAction="#mostrarVentanaListarLibros"/>
+            </VBox>
+        </Tab>
+        <Tab text="Clientes">
+            <VBox alignment="CENTER" spacing="20.0">
+                <Button text="Agregar Cliente" onAction="#mostrarVentanaAgregarCliente"/>
+                <Button text="Listar Clientes" onAction="#mostrarVentanaListarClientes"/>
+            </VBox>
+        </Tab>
+        <Tab text="Alquileres">
+            <VBox alignment="CENTER" spacing="20.0">
+                <Button text="Registrar Alquiler" onAction="#mostrarVentanaRegistrarAlquiler"/>
+                <Button text="Listar Alquileres" onAction="#mostrarVentanaListarAlquileres"/>
+            </VBox>
+        </Tab>
+    </tabs>
+</TabPane>
