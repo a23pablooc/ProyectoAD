@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<GridPane xmlns:fx="http://javafx.com/fxml"
+          xmlns="http://javafx.com/javafx"
+          fx:controller="org.proyectojpa.controller.BuscarLibrosController"
+          prefHeight="400.0" prefWidth="600.0">
+
+    <Label text="ID" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+    <TextField fx:id="idLibro" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+    <Label text="Código" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+    <TextField fx:id="codigoLibro" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+    <Label text="Título" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+    <TextField fx:id="tituloLibro" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+    <Label text="Autor" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+    <TextField fx:id="autorLibro" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+    <Label text="Año" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+    <TextField fx:id="anhoLibro" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+</GridPane>

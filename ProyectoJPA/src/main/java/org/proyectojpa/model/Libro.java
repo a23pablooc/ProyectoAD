@@ -1,6 +1,8 @@
-package org.proyectojpa;
+package org.proyectojpa.model;
 
 import jakarta.persistence.*;
+
+import java.util.List;
 
 @Entity
 @Table(name = "libro")
@@ -9,14 +11,14 @@ public class Libro {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idLibro;
 
-    @Column(length = 20)
+    @Column(length = 20, nullable = false, unique = true)
     private String codigo;
 
-    @Column(length = 200)
+    @Column(length = 200, nullable = false)
     private String titulo;
 
-    @Column( length = 300)
-    private String autores;
+    @ElementCollection
+    private List<String> autores;
 
     @Column(name = "año")
     private int anho;
@@ -24,7 +26,7 @@ public class Libro {
     public Libro() {
     }
 
-    public Libro(String codigo, String titulo, String autores, int anho) {
+    public Libro(String codigo, String titulo, List<String> autores, int anho) {
         this.codigo = codigo;
         this.titulo = titulo;
         this.autores = autores;
@@ -55,11 +57,11 @@ public class Libro {
         this.titulo = titulo;
     }
 
-    public String getAutores() {
+    public List<String> getAutores() {
         return autores;
     }
 
-    public void setAutores(String autores) {
+    public void setAutores(List<String> autores) {
         this.autores = autores;
     }
 
@@ -71,4 +73,8 @@ public class Libro {
         this.anho = anho;
     }
 
+    @Override
+    public String toString() {
+        return titulo;
+    }
 }

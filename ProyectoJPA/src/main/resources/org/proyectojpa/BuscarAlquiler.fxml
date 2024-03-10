@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<GridPane xmlns:fx="http://javafx.com/fxml"
+          xmlns="http://javafx.com/javafx"
+          fx:controller="org.proyectojpa.controller.BuscarAlquilerController"
+          prefHeight="400.0" prefWidth="600.0">
+
+    <Label text="ID" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+    <TextField fx:id="idAlquiler" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+    <Label text="Cliente" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+    <TextField fx:id="clienteAlquiler" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+    <Label text="Libro" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+    <TextField fx:id="libroAlquiler" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+    <Label text="Fecha" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+    <TextField fx:id="fechaAlquiler" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+
+</GridPane>

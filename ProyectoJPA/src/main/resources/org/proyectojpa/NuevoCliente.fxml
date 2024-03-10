@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<GridPane xmlns:fx="http://javafx.com/fxml"
+          xmlns="http://javafx.com/javafx"
+          fx:controller="org.proyectojpa.controller.NuevoClienteController"
+          prefHeight="400.0" prefWidth="600.0">
+
+    <Label text="DNI" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+    <TextField fx:id="dni" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+    <Label text="Nombre" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+    <TextField fx:id="nombre" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+    <Label text="Email" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+    <TextField fx:id="email" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+</GridPane>

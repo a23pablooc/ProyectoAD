@@ -2,27 +2,73 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-
 <TabPane xmlns:fx="http://javafx.com/fxml"
-         fx:controller="org.proyectojpa.BibliotecaGUIController">
-    <tabs>
-        <Tab text="Libros">
-            <VBox alignment="CENTER" spacing="20.0">
-                <Button text="Agregar Libro" onAction="#mostrarVentanaAgregarLibro"/>
-                <Button text="Listar Libros" onAction="#mostrarVentanaListarLibros"/>
-            </VBox>
-        </Tab>
-        <Tab text="Clientes">
-            <VBox alignment="CENTER" spacing="20.0">
-                <Button text="Agregar Cliente" onAction="#mostrarVentanaAgregarCliente"/>
-                <Button text="Listar Clientes" onAction="#mostrarVentanaListarClientes"/>
-            </VBox>
-        </Tab>
-        <Tab text="Alquileres">
-            <VBox alignment="CENTER" spacing="20.0">
-                <Button text="Registrar Alquiler" onAction="#mostrarVentanaRegistrarAlquiler"/>
-                <Button text="Listar Alquileres" onAction="#mostrarVentanaListarAlquileres"/>
-            </VBox>
-        </Tab>
-    </tabs>
+         fx:controller="org.proyectojpa.controller.BibliotecaGUIController">
+    <Tab text="Libros" closable="false">
+        <BorderPane>
+            <top>
+                <HBox spacing="10">
+                    <Button text="Nuevo" onAction="#nuevoLibro"/>
+                    <Button text="Buscar" onAction="#buscarLibros"/>
+                    <Button text="Limpiar Filtro" onAction="#limpiarBusquedaLibro"/>
+                </HBox>
+            </top>
+            <center>
+                <TableView fx:id="tablaLibros">
+                    <columns>
+                        <TableColumn text="ID" fx:id="idLibro"/>
+                        <TableColumn text="Código" fx:id="codigoLibro"/>
+                        <TableColumn text="Título" fx:id="tituloLibro"/>
+                        <TableColumn text="Autores" fx:id="autoresLibro"/>
+                        <TableColumn text="Año" fx:id="anhoLibro"/>
+                    </columns>
+                </TableView>
+            </center>
+        </BorderPane>
+    </Tab>
+
+    <Tab text="Clientes" closable="false">
+        <BorderPane>
+            <top>
+                <HBox spacing="10">
+                    <Button text="Nuevo" onAction="#nuevoCliente"/>
+                    <Button text="Buscar" onAction="#buscarClientes"/>
+                    <Button text="Limpiar Filtro" onAction="#limpiarBusquedaClientes"/>
+                </HBox>
+            </top>
+            <center>
+                <TableView fx:id="tablaClientes">
+                    <columns>
+                        <TableColumn text="ID" fx:id="idCliente"/>
+                        <TableColumn text="DNI" fx:id="dniCliente"/>
+                        <TableColumn text="Nombre" fx:id="nombreCliente"/>
+                        <TableColumn text="Email" fx:id="emailCliente"/>
+                    </columns>
+                </TableView>
+            </center>
+        </BorderPane>
+    </Tab>
+
+    <Tab text="Alquileres" closable="false">
+        <BorderPane>
+            <top>
+                <HBox spacing="10">
+                    <Button text="Alquilar" onAction="#nuevoAlquiler"/>
+                    <Button text="Devolver" onAction="#devolverAlquiler"/>
+                    <Button text="Buscar" onAction="#buscarAlquileres"/>
+                    <Button text="Limpiar Filtro" onAction="#limpiarBusquedaAlquileres"/>
+                </HBox>
+            </top>
+            <center>
+                <TableView fx:id="tablaAlquileres">
+                    <columns>
+                        <TableColumn text="ID" fx:id="idAlquiler"/>
+                        <TableColumn text="Libro" fx:id="libroAlquiler"/>
+                        <TableColumn text="Cliente" fx:id="clienteAlquiler"/>
+                        <TableColumn text="Fecha" fx:id="fechaAlquiler"/>
+                    </columns>
+                </TableView>
+            </center>
+        </BorderPane>
+    </Tab>
 </TabPane>

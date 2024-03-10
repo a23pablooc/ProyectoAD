@@ -6,7 +6,7 @@
 
     <persistence-unit name="ProyectoADJPA">
         <description>
-            Unidad de persistencia para el proyecto de Acceso a Datos
+            Unidad de persistencia para el proyecto de Acceso a Datos con JPA e Hibernate.
         </description>
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 
@@ -21,7 +21,7 @@
             <property name="jakarta.persistence.jdbc.dialect" value="org.hibernate.dialect.H2Dialect"/>
             <!-- Automáticamente, genera el esquema de la base de datos -->
             <property name="jakarta.persistence.schema-generation.database.action"
-                      value="create"/> <!-- none, create, drop-and-create, drop  -->
+                      value="drop-and-create"/> <!-- none, create, drop-and-create, drop  -->
 
             <!-- Muestra por pantalla las sentencias SQL -->
             <property name="hibernate.show_sql" value="true"/>

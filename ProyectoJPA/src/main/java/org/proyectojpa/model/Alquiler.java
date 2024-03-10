@@ -1,4 +1,4 @@
-package org.proyectojpa;
+package org.proyectojpa.model;
 
 import jakarta.persistence.*;
 
@@ -13,19 +13,25 @@ public class Alquiler {
     private int idAlquiler;
 
     @ManyToOne
-    @JoinColumn(name = "idLibro")
+    @JoinColumn(name = "idLibro", nullable = false)
     private Libro libro;
 
     @ManyToOne
-    @JoinColumn(name = "idCliente")
+    @JoinColumn(name = "idCliente", nullable = false)
     private Cliente cliente;
 
-    @Column(name = "fecha")
+    @Column(name = "fecha", nullable = false)
     @Temporal(TemporalType.DATE)
     private Date fecha;
 
-    @Column(name = "alquilado")
-    private boolean alquilado;
+    public Alquiler() {
+    }
+
+    public Alquiler(Libro libro, Cliente cliente, Date fecha) {
+        this.libro = libro;
+        this.cliente = cliente;
+        this.fecha = fecha;
+    }
 
     public int getIdAlquiler() {
         return idAlquiler;
@@ -57,13 +63,5 @@ public class Alquiler {
 
     public void setFecha(Date fecha) {
         this.fecha = fecha;
-    }
-
-    public boolean isAlquilado() {
-        return alquilado;
-    }
-
-    public void setAlquilado(boolean alquilado) {
-        this.alquilado = alquilado;
     }
 }

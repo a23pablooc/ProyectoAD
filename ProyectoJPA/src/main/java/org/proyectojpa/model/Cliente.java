@@ -1,4 +1,4 @@
-package org.proyectojpa;
+package org.proyectojpa.model;
 
 import jakarta.persistence.*;
 
@@ -10,10 +10,10 @@ public class Cliente {
     @Column(name = "idCliente")
     private int idCliente;
 
-    @Column(name = "DNI", length = 9)
+    @Column(name = "DNI", length = 9, nullable = false, unique = true)
     private String DNI;
 
-    @Column(name = "nombre", length = 200)
+    @Column(name = "nombre", length = 200, nullable = false)
     private String nombre;
 
     @Column(name = "email", length = 200)
@@ -58,5 +58,10 @@ public class Cliente {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%s - %s", DNI, nombre);
     }
 }
