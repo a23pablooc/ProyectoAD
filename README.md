@@ -23,3 +23,6 @@ El proyecto utilizará las siguientes tecnologías:
 
 ## Estado actual del proyecto
 El proyecto se encuentra incompleto, faltando por implementar el borrado de clientes y libros y la creacion y devolucion de alquileres.
+
+### Repositiorio público del proyecto
+https://github.com/a23pablooc/ProyectoAD
